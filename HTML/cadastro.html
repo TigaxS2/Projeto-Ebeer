@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
+    <html lang="pt-br">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/cadrastro.css">
-    <title>Tela de Cadrastro</title>
+    <script src="/js/script.js"></script>
+    <title>Tela de Cadastro</title>
 </head>
 <body>
     <div class="main-login">
@@ -14,35 +15,30 @@
         </div>
         <div class="right-login">
             <div class="card-login">
-                <h1>Faça o Cadrastro</h1>
-                <div class="textfield">
-                    <form class="textfield">
+                <h1>Faça o Cadastro</h1>
+                <form id="form-cadastro">
+                    <div class="textfield">
                         <label for="name">Nome de usuário</label>
-                        <input type="text" name="name" placeholder="Nome">
-                    </form>
-                </div>
-                <div class="textfield">
-                    <form class="textfield">
-                        <label for="usuario">Email</label>
-                        <input type="email" name="email" placeholder="Email">  
-                    </form>
-                </div>
-                <div class="textfield">
-                    <form class="textfield">
+                        <input type="text" placeholder="Nome" id="name">
+                    </div>
+                    <div class="textfield">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Email" id="email">  
+                    </div>
+                    <div class="textfield">
                         <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Senha">
-                    </form>
-                </div>
-                <div class="textfield">
-                    <form class="textfield">
-                        <label for="senha">Confirme a senha</label>
-                        <input type="password" name="senha" placeholder="Senha">
-                    </form>
-                </div>
-                <ul>
-                    <li><a href="/index.html" class="link">Faça o Login<a></li>
-                </ul>
-            <button class="btn-login">Cadrastrar</button>
+                        <input type="password" placeholder="Senha" id="senha">
+                    </div>
+                    <div class="textfield">
+                        <label for="confirm-senha">Confirme a senha</label>
+                        <input type="password" placeholder="Confirme a senha" id="confirm-senha">
+                    </div>
+                    <ul>
+                        <li><a href="/index.html" class="link">Faça o Login</a></li>
+                    </ul>
+                    <button class="btn-login" type="submit">Cadastrar</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
