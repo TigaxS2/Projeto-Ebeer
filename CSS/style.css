@@ -5,6 +5,10 @@ body{
     font-family: "Noto Sans Mono", monospace;
 }
 
+a{
+    text-decoration: none;
+}
+
 body *{
     box-sizing: border-box;
 }

@@ -2,11 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("#form-login");
     const emailInput = document.querySelector("#email");
     const passwordInput = document.querySelector("#senha");
+    const submitBtn = document.querySelector("#submit-btn");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-
-        console.log(emailInput.value, passwordInput.value); // Corrigido console.log
 
         // Verifica se o email está preenchido e se é válido
         if(emailInput.value.trim() === "" || !isEmailValid(emailInput.value)) {
@@ -22,17 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Se todas as validações passarem, pode prosseguir com o envio do formulário ou fazer o que desejar aqui
         alert("Formulário válido! Você pode prosseguir com o envio.");
-    });
+        
+        // Verifica o valor de window.location.href antes do redirecionamento
+        console.log("Valor de window.location.href:", window.location.href);
 
-    // Adiciona um event listener para o evento keydown no documento
-    document.addEventListener("keydown", function(event) {
-        // Verifica se a tecla pressionada é a tecla Enter
-        if (event.key === "Enter") {
-            // Evita o comportamento padrão (recarregar a página)
-            event.preventDefault();
-            // Simula o clique no botão de submissão do formulário
-            form.dispatchEvent(new Event("submit"));
-        }
+        // Redirecionamento alternativo usando JavaScript
+        window.location.replace("HTML/sobre.html");
     });
 
     // Função que valida e-mail
